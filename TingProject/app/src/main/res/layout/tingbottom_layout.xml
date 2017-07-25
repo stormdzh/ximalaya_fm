@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+   >
+    <!-- 底部播放信息 -->
+    <LinearLayout
+        android:id="@+id/ll_ting_miss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_last_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:nextFocusDown="@+id/iv_play_music"
+            android:nextFocusRight="@+id/iv_play_music"
+            android:src="@drawable/latest11" />
+
+        <ImageView
+            android:id="@+id/iv_play_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:nextFocusDown="@+id/iv_next_song"
+            android:nextFocusLeft="@+id/iv_last_song"
+            android:nextFocusRight="@+id/iv_next_song"
+            android:nextFocusUp="@+id/iv_last_song"
+            android:src="@drawable/widget_play_normal" />
+
+        <ImageView
+            android:id="@+id/iv_next_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:nextFocusDown="@+id/iv_on_demand"
+            android:nextFocusLeft="@+id/iv_play_music"
+            android:nextFocusRight="@+id/iv_on_demand"
+            android:nextFocusUp="@+id/iv_play_music"
+            android:src="@drawable/next11" />
+
+        <LinearLayout
+            android:id="@+id/ll_on_demand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_on_demand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:nextFocusDown="@+id/iv_live"
+                android:nextFocusLeft="@+id/iv_next_song"
+                android:nextFocusRight="@+id/iv_live"
+                android:nextFocusUp="@+id/iv_next_song"
+                android:src="@drawable/ting_on_demand" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:nextFocusDown="@+id/iv_ranking_list"
+                android:nextFocusLeft="@+id/iv_on_demand"
+                android:nextFocusRight="@+id/iv_ranking_list"
+                android:nextFocusUp="@+id/iv_on_demand"
+                android:src="@drawable/ting_live" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_ranking_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_ranking_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:nextFocusLeft="@+id/iv_live"
+                android:nextFocusUp="@+id/iv_live"
+                android:src="@drawable/ting_ranging_list" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

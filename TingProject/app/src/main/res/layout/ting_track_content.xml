@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/ting_imageview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ting_default_icon"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/ting_imageview">
+
+        <TextView
+            android:id="@+id/trackname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="trackname"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/trackname"
+            android:layout_marginTop="5dp"
+            android:text="intro"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

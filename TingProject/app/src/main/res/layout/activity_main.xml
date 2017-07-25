@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+
+    tools:context="com.testopensourceapplication.tingproject.MainActivity">
+
+
+   <HorizontalScrollView
+        android:padding="10dp"
+        android:id="@+id/ting_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:focusable="true"
+        android:scrollbarStyle="outsideInset">
+        <LinearLayout
+            android:id="@+id/ting_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+
+
+
+   <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/ting_header"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+<!--   //类别后的标签的网格布局&ndash;&gt;&ndash;&gt;-->
+
+        <GridView
+        android:id="@+id/gv_tag_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="157dp"
+        android:horizontalSpacing="31dp"
+        android:numColumns="4"
+        android:verticalSpacing="52dp"
+        android:visibility="gone"></GridView>
+
+       <!--   //声音列表的  标签列表后的ListView 展示 布局 -->
+
+           <ListView
+               android:id="@+id/gv_category_item_list"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal"
+               android:columnWidth="157dp"
+               android:horizontalSpacing="31dp"
+               android:numColumns="4"
+               android:verticalSpacing="52dp"
+               android:visibility="gone">
+           </ListView>
+
+       </LinearLayout>
+
+    <!--   底部播放信息-->
+    <!--<include
+        android:id="@+id/ting_vs"
+        layout="@layout/tingbottom_layout"
+        android:layout_below="@+id/ll_list"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        />-->
+
+</RelativeLayout>

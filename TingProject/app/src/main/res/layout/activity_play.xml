@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:layout_centerInParent="true"
+    tools:context="com.testopensourceapplication.tingproject.PlayActivity">
+    <ImageView
+        android:id="@+id/ting_imageview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/ting_default_icon"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/ting_imageview">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+         >
+            <TextView
+                android:id="@+id/textname"
+                android:layout_above="@+id/ll_ting_miss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="ddddddddddddddddddddddddd"/>
+            <LinearLayout
+                android:id="@+id/ll_ting_miss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:background="#000"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_last_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/iv_play_music"
+                    android:nextFocusRight="@+id/iv_play_music"
+                    android:src="@drawable/latest11" />
+                <ImageView
+                    android:id="@+id/iv_play_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/iv_next_song"
+                    android:nextFocusLeft="@+id/iv_last_song"
+                    android:nextFocusRight="@+id/iv_next_song"
+                    android:nextFocusUp="@+id/iv_last_song"
+                    android:src="@drawable/widget_play_normal" />
+
+                <ImageView
+                    android:id="@+id/iv_next_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/iv_on_demand"
+                    android:nextFocusLeft="@+id/iv_play_music"
+                    android:nextFocusRight="@+id/iv_on_demand"
+                    android:nextFocusUp="@+id/iv_play_music"
+                    android:src="@drawable/next11" />
+            </LinearLayout>
+
+
+
+            <SeekBar
+                android:layout_below="@+id/ll_ting_miss"
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"/>
+
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+</RelativeLayout>
